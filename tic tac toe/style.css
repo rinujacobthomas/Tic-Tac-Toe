@@ -1,0 +1,180 @@
+.row
+{
+  height: 100px;
+  width: 300px;
+}
+.border-bottom
+{
+border-bottom: 10px solid black;
+}
+.col
+{
+float: left;
+width: 100px;
+height: 90px;
+font-size: 100px;
+text-align: center;
+line-height: 100px;
+}
+.border-right
+{
+border-right: 10px solid black;
+}
+.col:hover
+{
+background-color: darkgrey;
+}
+svg
+{
+position: absolute;
+}
+.top,.ver,.hor
+{
+
+top: 8px;
+left: 3px;
+}
+.First
+{
+top: 0px;
+}
+#player1,#player2
+{
+width: 20em;
+float: left;
+}
+#myContainer {
+  margin-top: 4em;
+width: 1350px;
+height: 550px;
+position: relative;
+;
+}
+#myPlayer1 {
+width: 300px;
+height: 500px;
+position: absolute;
+background-image: url("images/wooden.jpg");
+  left:675px;
+  text-align: left;
+  padding-left:1em;
+  margin-top:3em;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+#myPlayer2 {
+width: 300px;
+height: 500px;
+position: absolute;
+background-image: url("images/wooden.jpg");
+right:675px;
+text-align: right;
+padding-right: 1em;
+margin-top:3em;
+border-top-left-radius: 15px;
+}
+#player2
+{
+  margin-left: 5.3em;
+}
+#player1,#player2
+{
+  width: 15em;
+  margin-top: 1em;
+}
+.gameNumber
+{
+  position: absolute;
+  background-color: white;
+  top: 250px;
+  left:545px;
+  width: 19em;
+  height: 15em;
+  padding: 2em;
+  border-radius: 25px;
+}
+#numberOfGames
+{
+  width: 15em;
+}
+#start
+{
+  margin-top: 2em;
+  margin-left: 4em;
+  background-color:rgb(38, 80, 207);
+  height: 2.3em;
+  width: 7em;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+.container
+{
+
+width: 300px;
+margin-right: 600px;
+position: absolute;
+top: 160px;
+left: 520px;
+background-color: white;
+}
+#countdown
+{
+line-height: 100px;
+font-size: 70px;
+text-align: center;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {                                     
+    background-color: black;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 550px;
+    height: 200px;
+    text-align: center;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #winner                   
+  {
+      font-size: 40px;
+      color: yellow;
+      font-weight: bolder;
+  }
+  #winPlayer                
+  {
+   
+    color: white;
+    margin-top:0em;
+    font-size: 30px;
+  }
+  #tryAgain         
+  {
+    
+
+    margin-top:3em;
+    text-decoration: none;
+  }
+  body
+  {
+      background-image: url("images/wall.jpg");
+  }

@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">              <!--including stylesheet-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"     
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">      <!--bootstrap-->
+  <script src= 
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">           
+      </script>                                                           <!--jquery-->
+</head>
+<body>
+    <div id ="myContainer">                                           <!--div -->
+        <div id ="myPlayer1">                                         <!--div moving right-->
+                <h2>Player 2</h2>
+                <input type="text" id="player1" class="form-control" placeholder="Name">      <!--textbox for entering player name-->
+                <div id="player1won" style="font-size: 25px;margin-top: 7em;"></div>          <!--for displaying games won by player one-->
+               
+        </div>
+        <div id ="myPlayer2">                             <!--div moving left-->
+            <h2>Player 1</h2>
+                <input type="text" id="player2" class="form-control" placeholder="Name">        <!--textbox for entering player name-->
+                <div id="player2won" style="font-size: 25px;margin-top: 7em;"></div>            <!--for displaying games won by player two-->
+        </div>
+        </div>
+        <div class="gameNumber" id="gameNumber">                      <!--div with field to select no of games and start button-->
+          <div id="buttondiv" style="display: block;">                
+              <h3>Number of Games</h3>
+              <select name="" id="numberOfGames" class="form-control">             <!--to select no of games-->
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="7">7</option>
+                <option value="9">9</option>
+                <option value="11">11</option>
+                <option value="13">13</option>
+                <option value="15">15</option>
+              </select>
+              <button id="start" onclick="myMove()">Start</button>        <!--button to start game-->
+          </div>
+                <div id="countdown" style="display: none;"></div>
+                </div>
+<div class="container" id="game" style="display: none;;width: 300px;">          <!--board container-->
+  <div class="row border-bottom">                         <!--setting row with border-->
+    <div class="col border-right" id="div1" onclick="display(this)"></div>      <!--setting columns with border-->
+    <div class="col border-right" id="div2" onclick="display(this)"></div>
+    <div class="col" id="div3" onclick="display(this)"></div>
+  </div>
+  <div class="row border-bottom">                 <!--setting row with border-->
+      <div class="col border-right" id="div4" onclick="display(this)"></div>        <!--setting columns with border-->
+      <div class="col border-right" id="div5" onclick="display(this)"></div>            <!--setting columns with border-->
+      <div class="col" id="div6" onclick="display(this)"></div>
+    </div>
+    <div class="row">
+        <div class="col border-right" id="div7" onclick="display(this)"></div>
+        <div class="col border-right" id="div8" onclick="display(this)"></div>
+        <div class="col" id="div9" onclick="display(this)"></div>
+      </div>
+      <svg id="lefttopdia" class="left top dia clr" height="600px" width="400px" style="display: none;" >     <!--lines-->
+          <line x1="08" y1="0" x2="290" y2="290" style="stroke:rgb(209, 43, 43);stroke-width:8px" />
+      </svg>
+      <svg id="righttopdia" class="right top dia clr" height="600px" width="400px" style="display: none;" >
+          <line x1="-7" y1="290" x2="290" y2="-15" style="stroke:rgb(209, 43, 43);stroke-width:8px" />
+      </svg>
+      <svg id="firsthor" class="First hor clr" height="600px" width="400px" style="display: none;" >
+          <line x1="0" y1="48" x2="320" y2="48" style="stroke:rgb(209, 43, 43);stroke-width:8px" />
+      </svg>
+      <svg id="sechor" class="sec hor clr" height="600px" width="400px" style="display: none;" >
+          <line x1="0" y1="137" x2="320" y2="137" style="stroke:rgb(209, 43, 43);stroke-width:8px" />
+      </svg> 
+      <svg id="thirdhor" class="third hor clr" height="600px" width="400px" style="display: none;" >
+          <line x1="0" y1="235" x2="320" y2="235" style="stroke:rgb(209, 43, 43);stroke-width:8px" />
+      </svg>
+      <svg id="firstver" class="first ver clr" height="600px" width="400px" style="display: none;" >
+          <line x1="44" y1="0" x2="44" y2="290" style="stroke:rgb(209, 43, 43);stroke-width:8px" />
+      </svg>
+      <svg id="secver" class="sec ver clr" height="600px" width="400px" style="display: none;" >
+          <line x1="140" y1="0" x2="140" y2="290" style="stroke:rgb(209, 43, 43);stroke-width:8px" />
+      </svg>
+      <svg id="thirdver" class="third ver clr" height="600px" width="400px" style="display: none;" >
+          <line x1="240" y1="0" x2="240" y2="290" style="stroke:rgb(209, 43, 43);stroke-width:8px" />
+      </svg>
+</div>
+<div id="myModal" class="modal">            <!--popup result-->
+    <!-- Modal content -->
+    <div class="modal-content" id="modal-content" style="background-color: black;">
+      <div id="winner">Winner</div>               <!--winner-->
+      <div id="winPlayer"></div>                  <!--winner name-->
+      <div id="tryAgain"><a href="" style="color: white;">Try Again</a></div>
+    </div>
+  </div>
+  <div></div>
+<script src="script.js"></script>   <!--Loading script file-->
+</body>
+</html>
